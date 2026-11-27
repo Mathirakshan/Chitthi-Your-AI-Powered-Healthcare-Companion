@@ -1,0 +1,17 @@
+{
+  "name": "chitthi",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev --workspace=@chitthi/api\" \"npm run dev --workspace=@chitthi/web\"",
+    "build": "npm run build --workspace=@chitthi/shared && npm run build --workspace=@chitthi/api && npm run build --workspace=@chitthi/web",
+    "test": "npm run test --workspace=@chitthi/api"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

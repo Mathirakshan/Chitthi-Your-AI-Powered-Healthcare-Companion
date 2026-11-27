@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 16px;
+    background-color: #F8FAFC;
+    color: #172554;
+    overflow-x: clip;
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-x: clip;
+  }
+
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  a:focus-visible {
+    outline: 3px solid #4F46E5;
+    outline-offset: 2px;
+  }
+}
+
+.chitthi-large-text main {
+  font-size: 1.125rem;
+}
+
+.chitthi-large-text main p,
+.chitthi-large-text main input,
+.chitthi-large-text main button,
+.chitthi-large-text main label {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
